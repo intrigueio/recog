@@ -1,7 +1,7 @@
 
-require 'recog/matcher'
-require 'recog/formatter'
-require 'recog/match_reporter'
+require_relative 'matcher'
+require_relative 'formatter'
+require_relative 'match_reporter'
 
 module Recog
 module MatcherFactory

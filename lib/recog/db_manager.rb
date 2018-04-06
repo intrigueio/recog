@@ -1,7 +1,7 @@
 module Recog
 class DBManager
   require 'nokogiri'
-  require 'recog/db'
+  require_relative 'db'
 
   attr_accessor :path, :databases
 

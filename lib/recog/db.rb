@@ -4,7 +4,7 @@ module Recog
 # kind of fingerprintable data, e.g. an HTTP `Server` header
 class DB
   require 'nokogiri'
-  require 'recog/fingerprint'
+  require_relative 'fingerprint'
 
   # @return [String]
   attr_reader :path
