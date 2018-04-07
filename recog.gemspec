@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = Recog::VERSION
   s.required_ruby_version = '>= 2.1'
   s.authors     = [
-      'Rapid7 Research'
+      'Rapid7 Research',
       'jcran'
   ]
   s.email       = [
