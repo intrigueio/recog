@@ -3,10 +3,8 @@ module Recog
 # A fingerprint that can be {#match matched} against a particular kind of
 # fingerprintable data, e.g. an HTTP `Server` header
 class Fingerprint
-  require 'set'
-
-  require 'recog/fingerprint/regexp_factory'
-  require 'recog/fingerprint/test'
+  require_relative 'fingerprint/regexp_factory'
+  require_relative 'fingerprint/test'
 
   # A human readable name describing this fingerprint
   # @return (see #parse_description)

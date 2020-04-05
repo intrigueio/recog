@@ -3,14 +3,15 @@ $LOAD_PATH.push File.expand_path('../lib', __FILE__)
 require 'recog/version'
 
 Gem::Specification.new do |s|
-  s.name        = 'recog'
+  s.name        = 'recog-intrigue'
   s.version     = Recog::VERSION
   s.required_ruby_version = '>= 2.1'
   s.authors     = [
-      'Rapid7 Research'
+      'Rapid7 Research',
+      'jcran'
   ]
   s.email       = [
-      'research@rapid7.com'
+      'jcran@intrigue.io'
   ]
   s.homepage    = "https://www.github.com/rapid7/recog"
   s.summary     = %q{Network service fingerprint database, classes, and utilities}

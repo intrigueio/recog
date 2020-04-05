@@ -4,7 +4,7 @@ module Recog
 # kind of fingerprintable data, e.g. an HTTP `Server` header
 class DB
   require 'nokogiri'
-  require 'recog/fingerprint'
+  require_relative 'fingerprint'
 
   # @return [String]
   attr_reader :path
@@ -36,12 +36,12 @@ class DB
   DEFAULT_FP_PREFERENCE = 0.10
 
   # @param path [String]
-  def initialize(path)
+  def initialize(filename)
     @match_key = nil
     @protocol = ''
     @database_type = ''
     @preference = DEFAULT_FP_PREFERENCE.to_f
-    @path = path
+    @path = "#{File.dirname(__FILE__)}/../../xml/#{filename}"
     @fingerprints = []
 
     parse_fingerprints

@@ -1,6 +1,6 @@
-require 'recog/verifier'
-require 'recog/formatter'
-require 'recog/verify_reporter'
+require 'verifier'
+require 'formatter'
+require 'verify_reporter'
 
 module Recog
 module VerifierFactory

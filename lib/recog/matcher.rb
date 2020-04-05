@@ -11,6 +11,27 @@ class Matcher
     @multi_match = multi_match
   end
 
+  # @param banner_string [String] A banner string to attempt to match against the Recog DB.
+  def match_banner(banner_string)
+    all_extractions = []
+
+    fingerprints.each do |fp|
+      extractions = fp.match(banner_string)
+      if extractions
+        found_extractions = true
+        extractions['data'] = banner_string
+        if multi_match
+          all_extractions << extractions
+        else
+          all_extractions = [extractions]
+          break
+        end
+      end
+    end
+
+  all_extractions
+  end
+
   # @param banners_file [String] The source of banners to attempt to match against the Recog DB.
   def match_banners(banners_file)
     reporter.report do
