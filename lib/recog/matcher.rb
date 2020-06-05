@@ -40,6 +40,14 @@ class Matcher
       file_source = false
 
       if banners_file and banners_file != "-"
+        
+        # add fully qualified path if it doesnt start with a '/'
+        unless banners_file.first == "/"
+          banners_file = "#{File.expand_path("../..", File.dirname(__FILE__))}/#{banners_file}"
+        end 
+
+        puts "DEBUG ... loading in recog sigs from #{banners_file}"
+
         fd = File.open(banners_file, "rb")
         file_source = true
       end
