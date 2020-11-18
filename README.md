@@ -1,6 +1,7 @@
 # Recog: A Recognition Framework
 [![Gem Version](https://badge.fury.io/rb/recog.svg)](http://badge.fury.io/rb/recog)
 [![Build Status](https://travis-ci.org/rapid7/recog.svg?branch=master)](https://travis-ci.org/rapid7/recog)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fintrigueio%2Frecog.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fintrigueio%2Frecog?ref=badge_shield)
 
 
 Recog is a framework for identifying products, services, operating systems, and hardware by matching fingerprints against data returned from various network probes. Recog makes it simple to extract useful information from web server banners, snmp system description fields, and a whole lot more.
@@ -83,3 +84,7 @@ MATCH: {"matched"=>"OpenSSH running on Ubuntu 14.04", "service.version"=>"6.6p1"
 
 * Create a single fingerprint for each product as long as the pattern remains clear and readable. If that is not possible, the pattern should be logically decomposed into additional fingerprints.
 * Create regular expressions that allow for flexible version number matching. This ensures greater probability of matching a product. For example, all known public releases of a product report either `major.minor` or `major.minor.build` format version numbers. If the fingerprint strictly matches this version number format, it would fail to match a modified build of the product that reports only a `major` version number format.
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fintrigueio%2Frecog.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fintrigueio%2Frecog?ref=badge_large)
